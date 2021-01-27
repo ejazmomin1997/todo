@@ -1,0 +1,25 @@
+<h1>Welcome</h1>
+<div class="container">
+  <p>
+    welcome {{name}}!
+    You can manage your todo list <a routerLink = "/todos">here</a>
+  </p>
+</div>
+
+<div class="container">
+  <p>
+   click here to get customized welcome message
+   <button (click)="getWelcomeMessageWithPathVariable()">
+      Get Welcome message
+   </button>
+  </p>
+</div>
+
+<div class="container" *ngIf='welcomeMessage'>
+<h2>{{welcomeMessage}}</h2>
+</div>
+
+
+<div class="container" *ngIf='welcomeMessageErrorMessage'>
+  <h2>{{welcomeMessageErrorMessage}}</h2>
+  </div>

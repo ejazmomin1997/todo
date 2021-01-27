@@ -1,0 +1,13 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-brand">My Application</div>
+        <ul class="navbar-nav">
+            <li><a *ngIf ="this.hardcodedAuthenticationService.userLoggedIn()" routerLink="/welcome/Ejaz" class="nav-link">Home</a></li>
+            <li><a *ngIf ="this.hardcodedAuthenticationService.userLoggedIn()" routerLink="/todos" class="nav-link">Todos</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a *ngIf ="!this.hardcodedAuthenticationService.userLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+            <li><a *ngIf ="this.hardcodedAuthenticationService.userLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+</header>
